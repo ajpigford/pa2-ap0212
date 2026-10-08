@@ -1,0 +1,118 @@
+{
+  "name": "HTTP Router",
+  "grading_timeout": 180,
+  "subtest": {
+    "delim": "&",
+    "format": "  >     %10s %-40s"
+  },
+  "tests": {
+    "TestStandardMethods": {
+      "desc": "Check requests that use standard HTTP methods",
+      "points": 1.0
+    },
+    "TestArbitraryMethods": {
+      "desc": "Check requests that use arbitrary alphanumeric methods",
+      "points": 1.0
+    },
+    "TestMethodCaseSensitivity": {
+      "desc": "Check that request methods are not case-sensitive",
+      "points": 1.0
+    },
+    "TestOverlappingMethods": {
+      "desc": "Check routes that use the same path but different request methods",
+      "points": 1.0
+    },
+    "TestHardcodedPaths": {
+      "desc": "Check that common routes were not hard-coded in an empty router",
+      "points": 1.0
+    },
+    "TestLongerPaths": {
+      "desc": "Check requests to arbitrary paths with multiple directories",
+      "points": 1.0
+    },
+    "TestShorterPaths": {
+      "desc": "Check requests to very short paths",
+      "points": 1.0
+    },
+    "TestPathSlashes": {
+      "desc": "Check that leading and trailing slashes in paths are ignored",
+      "points": 1.0
+    },
+    "TestPathCaseSensitivity": {
+      "desc": "Check that paths are case-sensitive",
+      "points": 1.0
+    },
+    "TestPathOverwriting": {
+      "desc": "Check that adding a route more than once updates its handler",
+      "points": 1.0
+    },
+    "TestIntermediatePaths": {
+      "desc": "Check unroutable paths that are prefixes of routable ones (and vice versa)",
+      "points": 1.0
+    },
+    "TestLongestPath": {
+      "desc": "Check that router finds the longest possible matching path",
+      "points": 1.0
+    },
+    "TestRepeatedPathNames": {
+      "desc": "Check that routes can have subdirectories with same name as parent",
+      "points": 1.0
+    },
+    "TestCaptureResolves": {
+      "desc": "Check that routes with captures can be resolved at all, ignoring whether RawQuery is correct",
+      "points": 1.0
+    },
+    "TestBasicCapture": {
+      "desc": "Check that capture yields correct RawQuery",
+      "points": 1.0
+    },
+    "TestArbitraryPathCapture": {
+      "desc": "Check that capture works at an arbitrary position in an arbitrary path",
+      "points": 1.0
+    },
+    "TestMultipleCaptures": {
+      "desc": "Check that several captures can appear in one route",
+      "points": 1.0
+    },
+    "TestCaptureMultipleValues": {
+      "desc": "Check that multiple values can be captured under a single key",
+      "points": 1.0
+    },
+    "TestCaptureKeyOverwriting": {
+      "desc": "Check that keys are overwritten when adding several capturing routes",
+      "points": 1.0
+    },
+    "TestAmbiguousPaths1": {
+      "desc": "Check that non-capturing routes have precedence over capturing ones",
+      "points": 1.0
+    },
+    "TestAmbiguousPaths2": {
+      "desc": "Check non-capturing route precedence with ambiguous routes",
+      "points": 1.0
+    },
+    "TestAmbiguousPaths3": {
+      "desc": "Check non-capturing route precedence with very ambiguous routes",
+      "points": 1.0
+    },
+    "TestAmbiguousPaths4": {
+      "desc": "Check non-capturing route precedence with longer ambiguous routes",
+      "points": 0.0
+    },
+    "TestGreedyResolver": {
+      "desc": "Check that greedy resolution doesn't cause router to ignore valid routes",
+      "points": 1.0
+    },
+    "TestGreedyAmbiguousPaths1": {
+      "desc": "Check precedence and greedy resolution with ambiguous routes",
+      "points": 1.0
+    },
+    "TestGreedyAmbiguousPaths2": {
+      "desc": "Check precedence and greedy resolution with very ambiguous routes",
+      "points": 1.0
+    },
+    "TestNonlocalCaptureOverwriting": {
+      "desc": "Check that capture keys are only overwritten when absolutely necessary",
+      "points": 1.0
+    }
+  }
+}
